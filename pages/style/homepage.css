@@ -63,6 +63,21 @@ header {
 	font-size: 18px;
 	font-weight: 500;
 	color: #040522;
+	position: relative;
+}
+.header__nav nav ul li a::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #040522;
+	content: "";
+	transition: width 0.5s ease-out;
+}
+.header__nav nav ul li a:hover::after,
+.header__nav nav ul li a:focus::after {
+	width: 100%;
 }
 .header__searcher {
 	display: flex;
@@ -126,8 +141,24 @@ header {
 	display: inline-block;
 	background-color: #FF843F;
 	color: #FFFFFF;
-	padding: 15px 30px;
+	padding: 15px 15px 15px 30px;
 	border-radius: 50px;
+	transition: all 0.5s ease;
+}
+.header__start_shopping::after {
+	content: url('../../img/arrow.svg');
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.1);
+	text-align: center;
+	line-height: 26px;
+	border-radius: 100px;
+	width: 26px;
+	height: 26px;
+	margin-left: 30px;
+}
+.header__start_shopping:hover {
+	transition: all 0.5s ease;
+	background-color: #171FE5;
 }
 .header__front_img {
 	position: absolute;
@@ -251,6 +282,21 @@ header {
 	font-size: 22px;
 	color: #E56117;
 	font-weight: 600;
+	position: relative;
+}
+.main__view_all::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #E56117;
+	content: "";
+	transition: width 0.5s ease-out;
+}
+.main__view_all:hover::after,
+.main__view_all:focus::after {
+	width: 100%;
 }
 .main__photo_gallery_plitochka {
 	display: flex;
@@ -323,7 +369,7 @@ header {
 }
 .main__brand {
 	background-color: #F8FCFD;
-	width: 1300px;
+	width: 1240px;
 }
 .main__wrapper_brand {
 	display: flex;
@@ -372,6 +418,21 @@ header {
 .main__see_more {
 	color: #E56117;
 	font-weight: 500;
+	position: relative;
+}
+.main__see_more::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #E56117;
+	content: "";
+	transition: width 0.5s ease-out;
+}
+.main__see_more:hover::after,
+.main__see_more:focus::after {
+	width: 100%;
 }
 .main__bottom_post time {
 	font-weight: 500;
@@ -402,6 +463,11 @@ footer .wrapper {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	transition: all 0.5s ease;
+}
+.footer__social_media span:hover {
+	opacity: 0.3;
+	transition: all 0.5s ease;
 }
 .footer__social_media a {
 	position: relative;
@@ -426,9 +492,15 @@ footer .wrapper {
 	line-height: 33px;
 	margin-bottom: 30px;
 }
-.footer__nav_wrap a {
+.footer__nav_wrap a,
+.contact {
 	font-weight: 500;
 	line-height: 17px;
 	color: #FFFFFF;
 	opacity: 0.7;
+	transition: all 0.5s ease;
+}
+.footer__nav_wrap a:hover {
+	transition: all 0.5s ease;
+	opacity: 1;
 }
