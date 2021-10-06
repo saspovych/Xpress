@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -14,6 +17,19 @@ ul {
 }
 a {
 	text-decoration: none;
+}
+p {
+	opacity: 0.7;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+time {
+	font-family: 'Lexend', sans-serif;
 }
 .wrapper {
 	width: 1100px;
@@ -104,6 +120,7 @@ header {
 }
 .header__subtitle {
 	margin-bottom: 40px;
+	opacity: 1;
 }
 .header__start_shopping {
 	display: inline-block;
@@ -220,12 +237,13 @@ header {
 .bottom_slider.swiper-container .swiper-wrapper {
 	padding: 30px 0 70px 0;
 }
-.main__new_arrival_title {
+.main__title_view {
 	margin-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
-.main__new_arrival h2 {
+.main__title_view h2 {
 	font-size: 44px;
 	font-weight: 600;
 }
@@ -249,16 +267,168 @@ header {
 .main__top_selling {
 	margin-top: 100px;
 }
-.main__top_selling_title {
+.main__title {
 	text-align: center;
 	width: 50%;
 	margin: 0 auto;
 }
-.main__top_selling_title h2 {
+.main__title h2 {
 	font-size: 44px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
-.main__top_selling_title p {
+.main__title p {
 	margin-bottom: 50px;
+}
+.main__our_speciality {
+	margin-top: 80px;
+}
+.main__speciality {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+.main__speciality_box {
+	width: 320px;
+	height: 220px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	text-align: center;
+}
+.main__speciality_box:not(:last-child) {
+	margin-right: 30px;
+}
+.main__speciality_logo {
+	position: relative;
+	margin-top: 25px;
+}
+.main__speciality_logo span {
+	display: inline-block;
+	background-color: #171FE5;
+	opacity: 0.1;
+	border-radius: 10px;
+	height: 50px;
+	width: 50px;
+}
+.main__speciality_logo img {
+	position: absolute;
+	left: 50%;
+	top: 13px;
+	transform: translateX(-50%);
+}
+.main__speciality_box h4 {
+	font-size: 22px;
+	font-weight: 600;
+	margin: 20px 0 10px 0;
+}
+.main__brand {
+	background-color: #F8FCFD;
+	width: 1300px;
+}
+.main__wrapper_brand {
+	display: flex;
+	justify-content: space-between;
+}
+.main__brand_logo {
+	margin: 75px 0;
+}
+.main__blog_posts {
+	margin: 80px auto 120px auto;
+}
+.main__posts {
+	display: flex;
+	justify-content: space-between;
+}
+.main__title_view {
+	margin-bottom: 80px;
+}
+.main__title_view .subtitle {
+	width: 380px;
+}
+.main__wrap_post {
+	width: 450px;
+	box-shadow: 2px 4px 10px rgba(4, 5, 34, 0.05);
+	border-radius: 0px 0px 10px 10px;
+}
+.main__wrap_post:not(:last-child) {
+	margin-right: 15px;
+}
+.main__post_wrapper {
+	padding: 25px;
+}
+.main__post_wrapper h5 {
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.main__post_wrapper p {
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.main__bottom_post {
+	display: flex;
+	justify-content: space-between;
+}
+.main__see_more {
+	color: #E56117;
+	font-weight: 500;
+}
+.main__bottom_post time {
+	font-weight: 500;
+}
+footer {
+	background-color: #040522;
+}
+footer .wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 70px 0;
+}
+.footer__about_site {
+	width: 250px;
+}
+.footer__about_site p {
+	color: #FFFFFF;
+	margin: 35px 0;
+}
+.footer__social_media span {
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: #FFFFFF;
+	opacity: 0.1;
+	border-radius: 17.5px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.footer__social_media a {
+	position: relative;
+}
+.footer__social_media a:not(:first-child) {
+	margin-left: 30px;
+}
+.footer__social_media a:first-child {
+	margin-left: 15px;
+}
+.footer__navigation {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 50px;
+	grid-row-gap: 15px;
+}
+.footer__nav_title {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 33px;
+	margin-bottom: 30px;
+}
+.footer__nav_wrap a {
+	font-weight: 500;
+	line-height: 17px;
+	color: #FFFFFF;
+	opacity: 0.7;
 }
